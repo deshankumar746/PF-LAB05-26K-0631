@@ -167,16 +167,16 @@ int main()
 
     printf("\n Security Status  \n");
 
-    printf("Main Door Lock  : %d  ",(status&1) ? 1 : 0);
+    printf("Main Door Lock  = %d  ",(status&1) ? 1 : 0);
     printf((status&1) ? "ACTIVE\n" : "INACTIVE\n");
 
-    printf("Alarm System     : %d  ",(status&2) ? 1 : 0);
+    printf("Alarm System    = %d  ",(status&2) ? 1 : 0);
     printf((status&2) ? "ACTIVE\n" : "INACTIVE\n");
 
-    printf("CCTV Camera      : %d  ",(status&4) ? 1 : 0);
+    printf("CCTV Camera     = %d  ",(status&4) ? 1 : 0);
     printf((status&4) ? "ACTIVE\n" : "INACTIVE\n");
 
-    printf("Motion Sensor    : %d  ",(status&8) ? 1 : 0);
+    printf("Motion Sensor   = %d  ",(status&8) ? 1 : 0);
     printf((status&8) ? "ACTIVE\n" : "INACTIVE\n");
 
     printf("\n4-bit status: %d%d%d%d\n",
@@ -185,7 +185,7 @@ int main()
            (status&2)? 1: 0,
            (status&1)? 1: 0);
 
-    if((status&1) && (status&2) && (status&4) && (status&8))
+    if((status&1)&&(status&2)&&(status&4)&&(status&8))
         printf("Security System is FULLY ARMED\n");
     else
         printf("Security System is NOT FULLY ARMED\n");
