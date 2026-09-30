@@ -5,43 +5,40 @@ int main()
 	float baggage,allowance;
 	int remainder;
 
-	printf("1. Adult\n");
-	printf("2. Student\n");
-	printf("3. Senior Citizen\n");
-	printf("Enter passenger category: ");
+	printf("1.Adult\n");
+	printf("2.Student\n");
+	printf("3.Senior Citizen\n");
+	printf("Enter passenger category ");
 	scanf("%d",&category);
-
-	printf("1. Domestic\n");
-	printf("2. International\n");
-	printf("Enter destination type: ");
+	
+	printf("1.Domestic\n");
+	printf("2.International\n");
+	printf("Enter destination type ");
 	scanf("%d",&destination);
 
-	printf("Enter age: ");
+	printf("Enter age ");
 	scanf("%d",&age);
 
-	printf("Enter actual baggage weight: ");
+	printf("Enter baggage weight ");
 	scanf("%f",&baggage);
 
-	printf("Are travel documents valid? (1=Yes,0=No): ");
+	printf("Are documents valid?(1=Yes,0=No) ");
 	scanf("%d",&documents);
 
 	remainder=age%5;
-
 	switch(category)
 	{
 		case 1:
-			printf("\nPassenger Category: Adult\n");
+			printf("\nPassenger Category= Adult\n");
 
 			switch(destination)
 			{
 				case 1:
 					allowance=20;
 					break;
-
 				case 2:
 					allowance=30;
 					break;
-
 				default:
 					printf("Invalid destination type\n");
 					return 0;
@@ -49,18 +46,16 @@ int main()
 			break;
 
 		case 2:
-			printf("\nPassenger Category: Student\n");
+			printf("\nPassenger Category= Student\n");
 
 			switch(destination)
 			{
 				case 1:
 					allowance=25;
 					break;
-
 				case 2:
 					allowance=35;
 					break;
-
 				default:
 					printf("Invalid destination type\n");
 					return 0;
@@ -68,18 +63,16 @@ int main()
 			break;
 
 		case 3:
-			printf("\nPassenger Category: Senior Citizen\n");
+			printf("\nPassenger Category= Senior Citizen\n");
 
 			switch(destination)
 			{
 				case 1:
 					allowance=30;
 					break;
-
 				case 2:
 					allowance=40;
 					break;
-
 				default:
 					printf("Invalid destination type\n");
 					return 0;
@@ -91,14 +84,14 @@ int main()
 			return 0;
 	}
 
-	printf("Destination Type: %s\n",destination==1?"Domestic":"International");
-	printf("Permitted Baggage Allowance: %.2f kg\n",allowance);
+	printf("Destination Type:%s\n",destination==1?"Domestic":"International");
+	printf("Permitted Baggage Allowance:%.2f kg\n",allowance);
 	printf("Actual Baggage Weight: %.2f kg\n",baggage);
 
 	if(documents==1)
-		printf("Document Status: Valid\n");
+		printf("Document Status:Valid\n");
 	else
-		printf("Document Status: Invalid\n");
+		printf("Document Status:Invalid\n");
 
 	if(documents==0)
 	{
@@ -113,19 +106,15 @@ int main()
 		case 0:
 			printf("Category A\n");
 			break;
-
 		case 1:
 			printf("Category B\n");
 			break;
-
 		case 2:
 			printf("Category C\n");
 			break;
-
 		case 3:
 			printf("Category D\n");
 			break;
-
 		case 4:
 			printf("Category E\n");
 			break;
