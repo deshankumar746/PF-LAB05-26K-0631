@@ -7,26 +7,26 @@ int main()
 	int emergency=0,critical,senior,tempAlert;
 	int remainder;
 
-	printf("1. General Emergency\n");
-	printf("2. Cardiology\n");
-	printf("3. Neurology\n");
-	printf("4. Trauma\n");
-	printf("Enter department: ");
+	printf("1.General Emergency\n");
+	printf("2.Cardiology\n");
+	printf("3.Neurology\n");
+	printf("4.Trauma\n");
+	printf("Enter department ");
 	scanf("%d",&department);
 
-	printf("Enter age: ");
+	printf("Enter age ");
 	scanf("%d",&age);
 
-	printf("Enter heart rate: ");
+	printf("Enter heart rate ");
 	scanf("%d",&heartRate);
 
-	printf("Enter body temperature: ");
+	printf("Enter body temperature ");
 	scanf("%f",&temperature);
 
-	printf("Level of consciousness (1=Conscious,0=Unconscious): ");
+	printf("Level of consciousness(1=Conscious,0=Unconscious): ");
 	scanf("%d",&consciousness);
 
-	printf("Enter severity level (1=Low,2=Medium,3=High): ");
+	printf("Enter severity level(1=Low,2=Medium,3=High): ");
 	scanf("%d",&severity);
 
 	switch(department)
@@ -40,11 +40,9 @@ int main()
 				case 2:
 					emergency=0;
 					break;
-
 				case 3:
 					emergency=1;
 					break;
-
 				default:
 					printf("Invalid severity level\n");
 					return 0;
@@ -59,7 +57,6 @@ int main()
 				case 0:
 					emergency=0;
 					break;
-
 				case 1:
 					emergency=1;
 					break;
@@ -74,11 +71,9 @@ int main()
 				case 1:
 					emergency=0;
 					break;
-
 				case 0:
 					emergency=1;
 					break;
-
 				default:
 					printf("Invalid consciousness level\n");
 					return 0;
@@ -94,11 +89,9 @@ int main()
 				case 2:
 					emergency=0;
 					break;
-
 				case 3:
 					emergency=1;
 					break;
-
 				default:
 					printf("Invalid severity level\n");
 					return 0;
@@ -168,7 +161,7 @@ int main()
 			break;
 	}
 
-	printf("Final Triage Decision: ");
+	printf("Final Decision: ");
 
 	if(critical)
 		printf("Immediate Medical Attention\n");
